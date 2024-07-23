@@ -16,7 +16,9 @@ jobs:
           fetch-depth: 0
       - name: Say hello
         run: echo "Hello World!"
-      - name: List docker containers
+      - name: List docker containers before
         run: docker ps
       - name: Compose docker
         run: docker-compose up -d
+      - name: List docker containers after
+        run: docker ps
